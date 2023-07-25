@@ -6,7 +6,7 @@ import { ethers } from 'hardhat'
 const deployEntryPoint: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const provider = ethers.provider
   const from = await provider.getSigner().getAddress()
-  await new Create2Factory(ethers.provider).deployFactory()
+  // await new Create2Factory(ethers.provider).deployFactory()
 
   const ret = await hre.deployments.deploy(
     'EntryPoint', {
